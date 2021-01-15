@@ -55,11 +55,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Custom Controls\Premium.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Custom Controls\SmallButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Custom Controls\SmallStats.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Custom Controls\Tutorial.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -75,11 +83,17 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Custom Controls\Premium.xaml.cs">
+      <DependentUpon>Premium.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Custom Controls\SmallButton.xaml.cs">
       <DependentUpon>SmallButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="Custom Controls\SmallStats.xaml.cs">
       <DependentUpon>SmallStats.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\Tutorial.xaml.cs">
+      <DependentUpon>Tutorial.xaml</DependentUpon>
     </Compile>
     <Compile Include="Custom Controls\UserButton.xaml.cs">
       <DependentUpon>UserButton.xaml</DependentUpon>
@@ -114,6 +128,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\1.jpg" />
+    <Resource Include="Assets\2.jpg" />
+    <Resource Include="Assets\3.png" />
+    <Resource Include="Assets\4.jpg" />
+    <Resource Include="Assets\5.jpg" />
+    <Resource Include="Assets\profile1.jpg" />
+    <Resource Include="Assets\user1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\more-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\photos.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

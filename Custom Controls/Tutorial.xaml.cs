@@ -29,6 +29,18 @@ namespace EducationWPF.Custom_Controls
 
         #endregion //Constructors
 
+        public Uri BackgroundSource
+        {
+            get { return (Uri)GetValue(BackgroundSourceProperty); }
+            set { SetValue(BackgroundSourceProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for BackgroundSource.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty BackgroundSourceProperty =
+            DependencyProperty.Register("BackgroundSource", typeof(Uri), typeof(Tutorial));
+
+
+
         public Uri UserSource
         {
             get { return (Uri)GetValue(UserSourceProperty); }

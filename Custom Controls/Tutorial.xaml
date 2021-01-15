@@ -8,7 +8,7 @@
              d:DesignHeight="{Binding ElementName=_Tutorial, Path=DesiredSize}" d:DesignWidth="200"
              x:Name="_Tutorial">
     <Grid>
-        <Image Source="../Assets/1.jpg" Stretch="Fill" />
+        <Image Source="{Binding ElementName=_Tutorial, Path=BackgroundSource}" Stretch="Fill" />
 
         <Grid>
             <Grid.ColumnDefinitions>
