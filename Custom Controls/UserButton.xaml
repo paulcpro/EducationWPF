@@ -11,7 +11,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="30"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -27,6 +27,6 @@
         </Border>
         <TextBlock Margin="10,10,0,0" Text="{Binding ElementName=this, Path=Username}" FontWeight="Bold" Grid.Row="0" Grid.Column="1" />
         <TextBlock Margin="10,0,0,0" Text="{Binding ElementName=this, Path=NickName}" FontSize="8" Grid.Row="1" Grid.Column="1" />
-        <Image Margin="0,0,10,0" Width="20" Source="{Binding ElementName=this, Path=OptionsSource}" Grid.Column="2" Grid.RowSpan="2"/>
+        <Image Margin="0,0,5,0" Width="20" Source="{Binding ElementName=this, Path=OptionsSource}" Grid.Column="2" Grid.RowSpan="2"/>
     </Grid>
 </UserControl>
