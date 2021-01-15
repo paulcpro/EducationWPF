@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:EducationWPF.Custom_Controls"
              mc:Ignorable="d" 
              d:DesignHeight="40" d:DesignWidth="100"
-             x:Name="_UserButton">
+             x:Name="this">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30"/>
@@ -18,9 +18,15 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Image Source="{Binding ElementName=_UserButton, Path=UserSource}" Grid.Column="0" Grid.Row="2"/>
-        <TextBlock Text="{Binding ElementName=_UserButton, Path=Name}" Grid.Row="0" Grid.Column="1" />
-        <TextBlock Text="{Binding ElementName=_UserButton, Path=NickName}" Grid.Row="1" Grid.Column="1" />
-        <Image Source="{Binding ElementName=_UserButton, Path=OptionsSource}" Grid.Column="2" Grid.RowSpan="2"/>
+        <Border Background="Transparent" CornerRadius="5" Grid.Column="0" Grid.RowSpan="2">
+            <Rectangle Height="20" Width="20">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="{Binding ElementName=_UserButton, Path=UserSource}" />
+                </Rectangle.Fill>
+            </Rectangle>
+        </Border>
+        <TextBlock Margin="10,10,0,0" Text="{Binding ElementName=this, Path=Username}" FontWeight="Bold" Grid.Row="0" Grid.Column="1" />
+        <TextBlock Margin="10,0,0,0" Text="{Binding ElementName=this, Path=NickName}" FontSize="8" Grid.Row="1" Grid.Column="1" />
+        <Image Source="{Binding ElementName=this, Path=OptionsSource}" Grid.Column="2" Grid.RowSpan="2"/>
     </Grid>
 </UserControl>

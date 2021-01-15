@@ -69,8 +69,8 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="25"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Text="{Binding ElementName=this, Path=BoldText}" FontWeight="Bold" Grid.Column="0" />
-        <TextBlock Text="{Binding ElementName=this, Path=LightText}" Grid.Column="0" Margin="60,0,0,0"/>
+        <TextBlock Text="{Binding ElementName=this, Path=BoldText}" FontWeight="Bold" Grid.Column="0"/>
+        <TextBlock Text="{Binding ElementName=this, Path=LightText}" Grid.Column="0" Margin="60,0,0,0" />
         <Button Grid.Column="2" Style="{DynamicResource ButtonStyle1}">
             <Button.Content>
                 <Image Source="../Assets/more.png" Width="30" Height="20" HorizontalAlignment="Right" />

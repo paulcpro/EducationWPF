@@ -17,49 +17,45 @@
     <Border Background="White" CornerRadius="25">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="250"/>
                 <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="400"/>
             </Grid.ColumnDefinitions>
             
             <!-- Left Menu -->
             <StackPanel Grid.Column="0">
                 <!--<Image Source="../Assets/HomeIcon.png" />-->
                 <!--<Path Data="{StaticResource logo}" Fill="#F7542E" Stretch="Uniform"/>-->
-                <TextBlock Text="Online Education" Grid.Column="0" FontSize="16" HorizontalAlignment="Center" Margin="35,50,0,0"/>
+                <TextBlock Text="Online Education" Grid.Column="0" FontSize="16" HorizontalAlignment="Center" Margin="35,70,0,0"/>
 
-                <Border CornerRadius="15" Background="#F5F4F6">
+                <Border Height="175" CornerRadius="15" Background="#F5F4F6" Margin="40,130,40,0">
                     <StackPanel>
-                        <ccontrols:SmallButton ImageSource="./Assets/home.png" Text="Home"/>
-                        <ccontrols:SmallButton ImageSource="./Assets/search.png" Text="Discover"/>
-                        <ccontrols:SmallButton ImageSource="./Assets/chat.png" Text="Messages"/>
-                        <ccontrols:SmallButton ImageSource="./Assets/settings.png" Text="Settings"/>
+                        <ccontrols:SmallButton Margin="15,30,20,0" ImageSource="./Assets/home.png" Text="Home"/>
+                        <ccontrols:SmallButton Margin="15,15,20,0" ImageSource="./Assets/search.png" Text="Discover"/>
+                        <ccontrols:SmallButton Margin="15,15,20,0" ImageSource="./Assets/chat.png" Text="Messages"/>
+                        <ccontrols:SmallButton Margin="15,15,20,0" ImageSource="./Assets/settings.png" Text="Settings"/>
                     </StackPanel>
                 </Border>
-                
-                <ccontrols:UserButton UserSource="./Assets/Verification.png" Username="Updated Course" NickName="by @jdoe"/>
 
-                <ccontrols:SmallStats ImageSource="./Assets/Rewards.png" Stats="1400" Label="points"/>
-                <ccontrols:SmallStats ImageSource="./Assets/success.png" Stats="34.4%" Label="complete"/>
+                <Border CornerRadius="15" Background="#F5F4F6" Margin="40,15,40,0">
+                    <ccontrols:UserButton Height="50" UserSource="./Assets/success.png" Username="Updated Course" NickName="by @jdoe"/>
+                </Border>
 
-                <ccontrols:UserButton UserSource="./Assets/Verification.png" Username="John Doe" NickName="@jdoe"/>
+                <StackPanel Orientation="Horizontal" Margin="40, 100, 40,0">
+                    <ccontrols:SmallStats Height="80" Width="50" ImageSource="./Assets/crown.png" Stats="1400" Label="points"/>
+                    <ccontrols:SmallStats Height="80" Width="70" ImageSource="./Assets/success.png" Stats="34.4%" Label="complete" Margin="50,0,0,0"/>
+                </StackPanel>
+
+                <Border CornerRadius="10" Background="#E6E5E7" Margin="40,15,40,0" Height="50">
+                    <ccontrols:UserButton UserSource="./Assets/user1.jpg" Username="John Doe" NickName="@jdoe" OptionsSource="./Assets/more-1.png"/>
+                </Border>
             </StackPanel>
 
             <Line HorizontalAlignment="Right" Y1="0" Y2="{Binding Height, ElementName=this}" StrokeThickness=".5" Stroke="Black"/>
 
             <!-- Main Menu -->
             <StackPanel Grid.Column="1">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-
-                    <TextBlock Text="Streaming" FontWeight="Bold" FontSize="16"/>
-                    <TextBlock Text="Now" FontSize="16"/>
-                    <Image Source="./Assets/more.png" Width="30" Height="20"/>
-                </Grid>
+                <ccontrols:Separator BoldText="Streaming" LightText="Now"/>
 
                 <StackPanel Orientation="Horizontal">
                     <Image Source="./Assets/profile1.jpg" Width="30" Height="30"/>
@@ -76,17 +72,7 @@
                 <ccontrols:Tutorial UserSource="./Assets/user-1.jpg" Username="John Doe" NickName="@jdoe" Time="34 mins" BackgroundSource="./Assets/1.jpg" Description="Lorem ipsum dolor sit amet, consectetur" />
                 <ccontrols:Tutorial UserSource="./Assets/user-2.jpg" Username="John Doe" NickName="@jdoe" Time="34 mins" BackgroundSource="./Assets/1.jpg" Description="Lorem ipsum dolor sit amet, consectetur" />
 
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-
-                    <TextBlock Text="Top" FontWeight="Bold" FontSize="16"/>
-                    <TextBlock Text="Tutors" FontSize="16"/>
-                    <Image Source="./Assets/more.png" Width="30" Height="20"/>
-                </Grid>
+                <ccontrols:Separator BoldText="Top" LightText="Tutors"/>
 
                 <Grid>
                     <Grid.ColumnDefinitions>
