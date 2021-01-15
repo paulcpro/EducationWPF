@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace EducationWPF.Custom_Controls
 {
@@ -37,7 +38,7 @@ namespace EducationWPF.Custom_Controls
 
         // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ImageSourceProperty =
-            DependencyProperty.Register("ImageSource", typeof(Uri), typeof(SmallButton), new PropertyMetadata(0));
+            DependencyProperty.Register("ImageSource", typeof(Uri), typeof(SmallButton));
 
     }
 

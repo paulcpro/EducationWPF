@@ -38,7 +38,7 @@ namespace EducationWPF.Custom_Controls
 
         // Using a DependencyProperty as the backing store for ImageSource.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ImageSourceProperty =
-            DependencyProperty.Register("ImageSource", typeof(Uri), typeof(SmallStats), new PropertyMetadata(0));
+            DependencyProperty.Register("ImageSource", typeof(Uri), typeof(SmallStats));
 
         public string Stats
         {
@@ -48,7 +48,7 @@ namespace EducationWPF.Custom_Controls
 
         // Using a DependencyProperty as the backing store for Stats.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty StatsProperty =
-            DependencyProperty.Register("Stats", typeof(int), typeof(SmallStats));
+            DependencyProperty.Register("Stats", typeof(string), typeof(SmallStats));
 
         public string Label
         {
@@ -58,7 +58,7 @@ namespace EducationWPF.Custom_Controls
 
         // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty LabelProperty =
-            DependencyProperty.Register("Label", typeof(int), typeof(SmallStats));
+            DependencyProperty.Register("Label", typeof(string), typeof(SmallStats));
     }
 
 }

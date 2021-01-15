@@ -48,7 +48,7 @@ namespace EducationWPF.Custom_Controls
 
         // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty UserSourceProperty =
-            DependencyProperty.Register("UserSource", typeof(Uri), typeof(UserButton), new PropertyMetadata(0));
+            DependencyProperty.Register("UserSource", typeof(Uri), typeof(UserButton));
 
         public Uri OptionsSource
         {
@@ -58,7 +58,7 @@ namespace EducationWPF.Custom_Controls
 
         // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty OptionsSourceProperty =
-            DependencyProperty.Register("OptionsSource", typeof(Uri), typeof(UserButton), new PropertyMetadata(0));
+            DependencyProperty.Register("OptionsSource", typeof(Uri), typeof(UserButton));
     }
 
 }

@@ -59,6 +59,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Custom Controls\Separator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Custom Controls\SmallButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -85,6 +89,9 @@
     </Compile>
     <Compile Include="Custom Controls\Premium.xaml.cs">
       <DependentUpon>Premium.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\Separator.xaml.cs">
+      <DependentUpon>Separator.xaml</DependentUpon>
     </Compile>
     <Compile Include="Custom Controls\SmallButton.xaml.cs">
       <DependentUpon>SmallButton.xaml</DependentUpon>
@@ -161,6 +168,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\photos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

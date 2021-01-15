@@ -5,11 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EducationWPF"
         xmlns:ccontrols="clr-namespace:EducationWPF.Custom_Controls"
-        mc:Ignorable="d"
+        mc:Ignorable="d" x:Name="this"
         Title="MainWindow" Height="800" Width="1250" WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" Background="Transparent"> 
-    <Window.Resources>
-        
-    </Window.Resources>
+    <!--<Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Assets/icons.xaml"
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>-->
     <Border Background="White" CornerRadius="25">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -21,45 +25,56 @@
             <!-- Left Menu -->
             <StackPanel Grid.Column="0">
                 <!--<Image Source="../Assets/HomeIcon.png" />-->
+                <!--<Path Data="{StaticResource logo}" Fill="#F7542E" Stretch="Uniform"/>-->
                 <TextBlock Text="Online Education" Grid.Column="0" FontSize="16" HorizontalAlignment="Center" Margin="35,50,0,0"/>
 
-                <ccontrols:SmallButton ImageSource="../Assets/home.png" Text="Home"/>
-                <ccontrols:SmallButton ImageSource="../Assets/search.png" Text="Discover"/>
-                <ccontrols:SmallButton ImageSource="../Assets/chat.png" Text="Messages"/>
-                <ccontrols:SmallButton ImageSource="../Assets/settings.png" Text="Settings"/>
+                <Border CornerRadius="15" Background="#F5F4F6">
+                    <StackPanel>
+                        <ccontrols:SmallButton ImageSource="./Assets/home.png" Text="Home"/>
+                        <ccontrols:SmallButton ImageSource="./Assets/search.png" Text="Discover"/>
+                        <ccontrols:SmallButton ImageSource="./Assets/chat.png" Text="Messages"/>
+                        <ccontrols:SmallButton ImageSource="./Assets/settings.png" Text="Settings"/>
+                    </StackPanel>
+                </Border>
+                
+                <ccontrols:UserButton UserSource="./Assets/Verification.png" Username="Updated Course" NickName="by @jdoe"/>
 
-                <ccontrols:UserButton UserSource="../Assets/Verification.png" Username="" NickName=""/>
+                <ccontrols:SmallStats ImageSource="./Assets/Rewards.png" Stats="1400" Label="points"/>
+                <ccontrols:SmallStats ImageSource="./Assets/success.png" Stats="34.4%" Label="complete"/>
 
-                <ccontrols:SmallStats ImageSource="../Assets/Rewards.png" Stats="" Label=""/>
-                <ccontrols:SmallStats ImageSource="../Assets/Verification.png" Stats="" Label=""/>
-
-                <ccontrols:UserButton UserSource="../Assets/Verification.png" Username="" NickName=""/>
+                <ccontrols:UserButton UserSource="./Assets/Verification.png" Username="John Doe" NickName="@jdoe"/>
             </StackPanel>
-            
+
+            <Line HorizontalAlignment="Right" Y1="0" Y2="{Binding Height, ElementName=this}" StrokeThickness=".5" Stroke="Black"/>
+
             <!-- Main Menu -->
-            <StackPanel>
+            <StackPanel Grid.Column="1">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Streaming" FontWeight="Bold" FontSize="16"/>
+                    <TextBlock Text="Now" FontSize="16"/>
+                    <Image Source="./Assets/more.png" Width="30" Height="20"/>
                 </Grid>
 
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="../Assets/profile1.jpg"/>
-                    <Image Source="../Assets/profile1.jpg"/>
-                    <Image Source="../Assets/profile1.jpg"/>
-                    <Image Source="../Assets/profile1.jpg"/>
-                    <Image Source="../Assets/profile1.jpg"/>
-                    <Image Source="../Assets/profile1.jpg"/>
+                    <Image Source="./Assets/profile1.jpg" Width="30" Height="30"/>
+                    <Image Source="./Assets/profile1.jpg" Width="30" Height="30"/>
+                    <Image Source="./Assets/profile1.jpg" Width="30" Height="30"/>
+                    <Image Source="./Assets/profile1.jpg" Width="30" Height="30"/>
+                    <Image Source="./Assets/profile1.jpg" Width="30" Height="30"/>
+                    <Image Source="./Assets/profile1.jpg" Width="30" Height="30"/>
                 </StackPanel>
 
                 <TextBlock Text="Popular" />
                 <TextBlock Text="This Week" />
 
-                <ccontrols:Tutorial UserSource="" Username="" NickName="" Time="" BackgroundSource="" Description="" />
-                <ccontrols:Tutorial UserSource="" Username="" NickName="" Time="" BackgroundSource="" Description="" />
+                <ccontrols:Tutorial UserSource="./Assets/user-1.jpg" Username="John Doe" NickName="@jdoe" Time="34 mins" BackgroundSource="./Assets/1.jpg" Description="Lorem ipsum dolor sit amet, consectetur" />
+                <ccontrols:Tutorial UserSource="./Assets/user-2.jpg" Username="John Doe" NickName="@jdoe" Time="34 mins" BackgroundSource="./Assets/1.jpg" Description="Lorem ipsum dolor sit amet, consectetur" />
 
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -67,7 +82,10 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    
+
+                    <TextBlock Text="Top" FontWeight="Bold" FontSize="16"/>
+                    <TextBlock Text="Tutors" FontSize="16"/>
+                    <Image Source="./Assets/more.png" Width="30" Height="20"/>
                 </Grid>
 
                 <Grid>
@@ -80,25 +98,16 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
                     
-                    <ccontrols:UserButton UserSource="" Name="" NickName="" OptionsSource="" Grid.Column="0" Grid.Row="0"/>
-                    <ccontrols:UserButton UserSource="" Name="" NickName="" OptionsSource="" Grid.Column="0" Grid.Row="1"/>
-                    <ccontrols:UserButton UserSource="" Name="" NickName="" OptionsSource="" Grid.Column="1" Grid.Row="0"/>
-                    <ccontrols:UserButton UserSource="" Name="" NickName="" OptionsSource="" Grid.Column="1" Grid.Row="1"/>
+                    <ccontrols:UserButton UserSource="./Assets/user1.jpg" Username="John Doe" NickName="@jdoe" OptionsSource="./Assets/add.png" Grid.Column="0" Grid.Row="0"/>
+                    <ccontrols:UserButton UserSource="./Assets/user1.jpg" Username="John Doe" NickName="@jdoe" OptionsSource="./Assets/add.png" Grid.Column="0" Grid.Row="1"/>
+                    <ccontrols:UserButton UserSource="./Assets/user1.jpg" Username="John Doe" NickName="@jdoe" OptionsSource="./Assets/add.png" Grid.Column="1" Grid.Row="0"/>
+                    <ccontrols:UserButton UserSource="./Assets/user1.jpg" Username="John Doe" NickName="@jdoe" OptionsSource="./Assets/add.png" Grid.Column="1" Grid.Row="1"/>
                 </Grid>
             </StackPanel>
             
             <!-- Right Menu -->
-            <StackPanel>
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="100"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="40"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Text="Advanced" FontWeight="Bold" Grid.Column="0"/>
-                    <TextBlock Text=" Search" Grid.Column="0"/>
-                    <Image Source="" Grid.Column="2"/>
-                </Grid>
+            <StackPanel Grid.Column="2">
+                <ccontrols:Separator BoldText="Advanced" LightText=" Search"/>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBox />
@@ -106,13 +115,13 @@
                     <Button Content="Search" />
                 </StackPanel>
 
-                <Image Source="" />
+                <Image Source="./Assets/more.png" Width="30" Height="20" HorizontalAlignment="Right" />
 
-                <ccontrols:Tutorial UserSource="" Username="" NickName="" Time="" BackgroundSource="" Description=""/>
+                <ccontrols:Tutorial UserSource="./Assets/3.png" Username="John Doe" NickName="@jdoe" Time="34 mins" BackgroundSource="./Assets/1.jpg" Description="Lorem ipsum dolor sit amet, consectetur" />
 
                 <StackPanel Orientation="Horizontal">
-                    <ccontrols:Tutorial UserSource="" Username="" NickName="" Time="" BackgroundSource="" Description=""/>
-                    <ccontrols:Tutorial UserSource="" Username="" NickName="" Time="" BackgroundSource="" Description=""/>
+                    <ccontrols:Tutorial UserSource="./Assets/4.jpg" Username="John Doe" NickName="@jdoe" Time="34 mins" BackgroundSource="./Assets/1.jpg" Description="Lorem ipsum dolor sit amet, consectetur" />
+                    <ccontrols:Tutorial UserSource="./Assets/5.jpg" Username="John Doe" NickName="@jdoe" Time="34 mins" BackgroundSource="./Assets/1.jpg" Description="Lorem ipsum dolor sit amet, consectetur" />
                 </StackPanel>
 
                 <Grid>
@@ -121,9 +130,10 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="40"/>
                     </Grid.ColumnDefinitions>
+                    
                     <TextBlock Text="Advanced" FontWeight="Bold" Grid.Column="0"/>
                     <TextBlock Text=" Search" Grid.Column="0"/>
-                    <Image Source="" Grid.Column="2"/>
+                    <Image Source="./Assets/more.png" Grid.Column="2"/>
                 </Grid>
 
                 <ccontrols:Premium Days="50 Days of Premium!" GetIt="Get it before 01.01.2020" TextButton="Learn More" PremiumSource="../Assets/photos.png"/>

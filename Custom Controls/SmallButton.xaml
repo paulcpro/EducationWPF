@@ -6,9 +6,13 @@
              xmlns:local="clr-namespace:EducationWPF.Custom_Controls"
              mc:Ignorable="d" 
              d:DesignHeight="30" d:DesignWidth="80"
-             x:Name="_SmallButton">
+             x:Name="this">
     <Grid>
-        <Image Source="{Binding ElementName=_SmallButton, Path=ImageSource}"/>
-        <TextBlock Text="{Binding ElementName=_SmallButton, Path=Text}"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="{Binding ElementName=this, Path=ImageSource, TargetNullValue={x:Null}}" Height="30"/>
+        <TextBlock Text="{Binding ElementName=this, Path=Text}" Grid.Column="1"/>
     </Grid>
 </UserControl>

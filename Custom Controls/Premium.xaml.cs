@@ -37,7 +37,7 @@ namespace EducationWPF.Custom_Controls
 
         // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty DaysProperty =
-            DependencyProperty.Register("Days", typeof(string), typeof(Premium), new PropertyMetadata(0));
+            DependencyProperty.Register("Days", typeof(string), typeof(Premium));
 
         public string GetIt
         {
@@ -47,7 +47,7 @@ namespace EducationWPF.Custom_Controls
 
         // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty GetItProperty =
-            DependencyProperty.Register("GetIt", typeof(string), typeof(Premium), new PropertyMetadata(0));
+            DependencyProperty.Register("GetIt", typeof(string), typeof(Premium));
 
         public string TextButton
         {
@@ -57,7 +57,7 @@ namespace EducationWPF.Custom_Controls
 
         // Using a DependencyProperty as the backing store for TextButton.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TextButtonProperty =
-            DependencyProperty.Register("TextButton", typeof(string), typeof(Premium), new PropertyMetadata(0));
+            DependencyProperty.Register("TextButton", typeof(string), typeof(Premium));
 
         public Uri PremiumSource
         {
@@ -67,7 +67,7 @@ namespace EducationWPF.Custom_Controls
 
         // Using a DependencyProperty as the backing store for PremiumSource.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty PremiumSourceProperty =
-            DependencyProperty.Register("PremiumSource", typeof(Uri), typeof(Premium), new PropertyMetadata(0));
+            DependencyProperty.Register("PremiumSource", typeof(Uri), typeof(Premium));
     }
 
 }

@@ -69,7 +69,7 @@ namespace EducationWPF.Custom_Controls
 
         // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty NickNameProperty =
-            DependencyProperty.Register("NickName", typeof(int), typeof(Tutorial));
+            DependencyProperty.Register("NickName", typeof(string), typeof(Tutorial));
 
         public string Time
         {
@@ -79,17 +79,17 @@ namespace EducationWPF.Custom_Controls
 
         // Using a DependencyProperty as the backing store for Time.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TimeProperty =
-            DependencyProperty.Register("Time", typeof(string), typeof(Tutorial), new PropertyMetadata(0));
+            DependencyProperty.Register("Time", typeof(string), typeof(Tutorial));
 
-        public int Description
+        public string Description
         {
-            get { return (int)GetValue(DescriptionProperty); }
+            get { return (string)GetValue(DescriptionProperty); }
             set { SetValue(DescriptionProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for Description.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty DescriptionProperty =
-            DependencyProperty.Register("Description", typeof(int), typeof(Tutorial), new PropertyMetadata(0));
+            DependencyProperty.Register("Description", typeof(string), typeof(Tutorial));
 
     }
 
