@@ -91,6 +91,20 @@ namespace EducationWPF.Custom_Controls
         public static readonly DependencyProperty DescriptionProperty =
             DependencyProperty.Register("Description", typeof(string), typeof(Tutorial));
 
+
+
+        //public int DesiredSize
+        //{
+        //    get { return (int)GetValue(DesiredSizeProperty); }
+        //    set { SetValue(DesiredSizeProperty, value); }
+        //}
+
+        //// Using a DependencyProperty as the backing store for DesiredSize.  This enables animation, styling, binding, etc...
+        //public static readonly DependencyProperty DesiredSizeProperty =
+        //    DependencyProperty.Register("DesiredSize", typeof(int), typeof(Tutorial));
+
+
+
     }
 
 }

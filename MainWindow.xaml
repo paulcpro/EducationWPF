@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:EducationWPF"
         xmlns:ccontrols="clr-namespace:EducationWPF.Custom_Controls"
         mc:Ignorable="d" x:Name="this"
-        Title="MainWindow" Height="800" Width="1250" WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" Background="Transparent"> 
+        Title="MainWindow" Height="750" Width="1100" WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
     <!--<Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -17,13 +17,14 @@
     <Border Background="White" CornerRadius="25">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="250"/>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="182"/>
+                <ColumnDefinition Width="69"/>
+                <ColumnDefinition Width="500"/>
+                <ColumnDefinition Width="300"/>
             </Grid.ColumnDefinitions>
-            
+
             <!-- Left Menu -->
-            <StackPanel Grid.Column="0">
+            <StackPanel Grid.Column="0" Grid.ColumnSpan="2">
                 <!--<Image Source="../Assets/HomeIcon.png" />-->
                 <!--<Path Data="{StaticResource logo}" Fill="#F7542E" Stretch="Uniform"/>-->
                 <TextBlock Text="Online Education" Grid.Column="0" FontSize="16" HorizontalAlignment="Center" Margin="35,70,0,0"/>
@@ -51,28 +52,32 @@
                 </Border>
             </StackPanel>
 
-            <Line HorizontalAlignment="Right" Y1="0" Y2="{Binding Height, ElementName=this}" StrokeThickness=".5" Stroke="Black"/>
+            <Line HorizontalAlignment="Right" Y1="0" Y2="{Binding Height, ElementName=this}" StrokeThickness=".5" Stroke="Black" Grid.Column="2" Margin="0,0,501,0"/>
 
             <!-- Main Menu -->
-            <StackPanel Grid.Column="1">
-                <ccontrols:Separator BoldText="Streaming" LightText="Now"/>
+            <StackPanel Grid.Column="2">
+                <ccontrols:Separator Margin="30,40,30,0" BoldText="Streaming" LightText="Now"/>
 
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="./Assets/profile1.jpg" Width="30" Height="30"/>
-                    <Image Source="./Assets/profile1.jpg" Width="30" Height="30"/>
-                    <Image Source="./Assets/profile1.jpg" Width="30" Height="30"/>
-                    <Image Source="./Assets/profile1.jpg" Width="30" Height="30"/>
-                    <Image Source="./Assets/profile1.jpg" Width="30" Height="30"/>
-                    <Image Source="./Assets/profile1.jpg" Width="30" Height="30"/>
+                    <ccontrols:StreamButton Margin="30,0,0,0"/>
+                    <ccontrols:StreamButton Margin="10"/>
+                    <ccontrols:StreamButton Margin="10"/>
+                    <ccontrols:StreamButton Margin="10"/>
+                    <ccontrols:StreamButton Margin="10"/>
+                    <ccontrols:StreamButton Margin="10"/>
+                    <ccontrols:StreamButton Margin="10"/>
+                    <ccontrols:StreamButton Margin="10"/>
+                    <ccontrols:StreamButton Margin="10"/>
                 </StackPanel>
 
-                <TextBlock Text="Popular" />
-                <TextBlock Text="This Week" />
+                <ccontrols:Separator BoldText="Popular" LightText="This Week" Margin="30,10,30,10"/>
 
-                <ccontrols:Tutorial UserSource="./Assets/user-1.jpg" Username="John Doe" NickName="@jdoe" Time="34 mins" BackgroundSource="./Assets/1.jpg" Description="Lorem ipsum dolor sit amet, consectetur" />
-                <ccontrols:Tutorial UserSource="./Assets/user-2.jpg" Username="John Doe" NickName="@jdoe" Time="34 mins" BackgroundSource="./Assets/1.jpg" Description="Lorem ipsum dolor sit amet, consectetur" />
+                <StackPanel Orientation="Horizontal">
+                    <ccontrols:Tutorial Height="350" Margin="30,10,10,10" UserSource="./Assets/user-1.jpg" Username="John Doe" NickName="@jdoe" Time="34 mins" BackgroundSource="./Assets/1.jpg" Description="Lorem ipsum dolor sit amet, consectetur" />
+                    <ccontrols:Tutorial Margin="0,10,30,10" UserSource="./Assets/user-2.jpg" Username="John Doe" NickName="@jdoe" Time="34 mins" BackgroundSource="./Assets/1.jpg" Description="Lorem ipsum dolor sit amet, consectetur" />
+                </StackPanel>
 
-                <ccontrols:Separator BoldText="Top" LightText="Tutors"/>
+                <ccontrols:Separator BoldText="Top" LightText="Tutors" Margin="30,10,30,10"/>
 
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -83,17 +88,17 @@
                         <RowDefinition/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    
-                    <ccontrols:UserButton UserSource="./Assets/user1.jpg" Username="John Doe" NickName="@jdoe" OptionsSource="./Assets/add.png" Grid.Column="0" Grid.Row="0"/>
-                    <ccontrols:UserButton UserSource="./Assets/user1.jpg" Username="John Doe" NickName="@jdoe" OptionsSource="./Assets/add.png" Grid.Column="0" Grid.Row="1"/>
-                    <ccontrols:UserButton UserSource="./Assets/user1.jpg" Username="John Doe" NickName="@jdoe" OptionsSource="./Assets/add.png" Grid.Column="1" Grid.Row="0"/>
-                    <ccontrols:UserButton UserSource="./Assets/user1.jpg" Username="John Doe" NickName="@jdoe" OptionsSource="./Assets/add.png" Grid.Column="1" Grid.Row="1"/>
+
+                    <ccontrols:UserButton Margin="30,5,10,10" Height="50" UserSource="./Assets/user1.jpg" Username="John Doe" NickName="@jdoe" OptionsSource="./Assets/add.png" Grid.Column="0" Grid.Row="0"/>
+                    <ccontrols:UserButton Margin="30,5,10,10" Height="50" UserSource="./Assets/user1.jpg" Username="John Doe" NickName="@jdoe" OptionsSource="./Assets/add.png" Grid.Column="0" Grid.Row="1"/>
+                    <ccontrols:UserButton Margin="10,5,30,10" Height="50" UserSource="./Assets/user1.jpg" Username="John Doe" NickName="@jdoe" OptionsSource="./Assets/add.png" Grid.Column="1" Grid.Row="0"/>
+                    <ccontrols:UserButton Margin="10,5,30,10" Height="50" UserSource="./Assets/user1.jpg" Username="John Doe" NickName="@jdoe" OptionsSource="./Assets/add.png" Grid.Column="1" Grid.Row="1"/>
                 </Grid>
             </StackPanel>
-            
+
             <!-- Right Menu -->
-            <StackPanel Grid.Column="2">
-                <ccontrols:Separator BoldText="Advanced" LightText=" Search"/>
+            <StackPanel Grid.Column="3">
+                <ccontrols:Separator Margin="0,40,0,0" BoldText="Advanced" LightText=" Search"/>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBox />
@@ -116,7 +121,7 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="40"/>
                     </Grid.ColumnDefinitions>
-                    
+
                     <TextBlock Text="Advanced" FontWeight="Bold" Grid.Column="0"/>
                     <TextBlock Text=" Search" Grid.Column="0"/>
                     <Image Source="./Assets/more.png" Grid.Column="2"/>
