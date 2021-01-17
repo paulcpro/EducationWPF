@@ -29,13 +29,13 @@
 
                 <Ellipse VerticalAlignment="Center" Height="30" Width="30" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3">
                     <Ellipse.Fill>
-                        <ImageBrush ImageSource="{Binding ElementName=this, Path=UserSource}" />
+                        <ImageBrush Stretch="UniformToFill" ImageSource="{Binding ElementName=this, Path=UserSource}" />
                     </Ellipse.Fill>
                 </Ellipse>
                 <TextBlock Text="{Binding ElementName=this, Path=Username}" Grid.Column="1" Grid.Row="1"/>
                 <TextBlock Text="{Binding ElementName=this, Path=NickName}" Grid.Column="1" Grid.Row="2"/>
-                <Border BorderBrush="{x:Null}" Background="OrangeRed" BorderThickness="0" CornerRadius="10" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="3">
-                    <TextBlock Width="50" Height="30" Foreground="White" Text="{Binding ElementName=this, Path=Time}" />
+                <Border Width="50" Height="30" Background="OrangeRed" BorderThickness="0" CornerRadius="10" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="3">
+                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Text="{Binding ElementName=this, Path=Time}" />
                 </Border>
                 <Border Margin="10" Opacity="0.2" Background="White" CornerRadius="10" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">
                     <TextBlock Text="{Binding ElementName=this, Path=Description}" TextWrapping="Wrap" />

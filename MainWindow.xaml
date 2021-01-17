@@ -60,15 +60,14 @@
                 <ccontrols:Separator Margin="30,40,30,0" BoldText="Streaming" LightText="Now"/>
 
                 <StackPanel Orientation="Horizontal">
-                    <ccontrols:StreamButton Margin="30,0,0,0"/>
-                    <ccontrols:StreamButton Margin="10"/>
-                    <ccontrols:StreamButton Margin="10"/>
-                    <ccontrols:StreamButton Margin="10"/>
-                    <ccontrols:StreamButton Margin="10"/>
-                    <ccontrols:StreamButton Margin="10"/>
-                    <ccontrols:StreamButton Margin="10"/>
-                    <ccontrols:StreamButton Margin="10"/>
-                    <ccontrols:StreamButton Margin="10"/>
+                    <ccontrols:StreamUserProfileButton Width="40" Height="40" Margin="30,0,0,0"/>
+                    <ccontrols:StreamUserProfileButton Width="40" Height="40" Margin="10"/>
+                    <ccontrols:StreamUserProfileButton Width="40" Height="40" Margin="10"/>
+                    <ccontrols:StreamUserProfileButton Width="40" Height="40" Margin="10"/>
+                    <ccontrols:StreamUserProfileButton Width="40" Height="40" Margin="10"/>
+                    <ccontrols:StreamUserProfileButton Width="40" Height="40" Margin="10"/>
+                    <ccontrols:StreamUserProfileButton Width="40" Height="40" Margin="10"/>
+                    <ccontrols:StreamUserProfileButton Width="40" Height="40" Margin="10"/>
                 </StackPanel>
 
                 <ccontrols:Separator BoldText="Popular" LightText="This Week" Margin="30,30,30,10"/>
@@ -114,7 +113,7 @@
 
                 <ccontrols:Separator BoldText="Special" LightText="Offers" Margin="0,20,0,20"/>
 
-                <ccontrols:Premium Height="155" Days="50 Days of Premium!" GetIt="Get it before 01.01.2020" TextButton="Learn More" PremiumSource="../Assets/photos.png"/>
+                <ccontrols:Premium Height="120" Days="50 Days of Premium!" GetIt="Get it before 01.01.2020" TextButton="Learn More" PremiumSource="../Assets/photos.png"/>
             </StackPanel>
         </Grid>
     </Border>

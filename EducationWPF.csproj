@@ -79,6 +79,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Custom Controls\StreamUserProfileButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Custom Controls\Tutorial.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -112,6 +116,9 @@
     </Compile>
     <Compile Include="Custom Controls\StreamButton.xaml.cs">
       <DependentUpon>StreamButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\StreamUserProfileButton.xaml.cs">
+      <DependentUpon>StreamUserProfileButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="Custom Controls\Tutorial.xaml.cs">
       <DependentUpon>Tutorial.xaml</DependentUpon>
