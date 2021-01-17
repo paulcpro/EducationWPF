@@ -12,7 +12,7 @@
             <ColumnDefinition Width="30"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Image Source="{Binding ElementName=this, Path=ImageSource, TargetNullValue={x:Null}}" Height="20" Width="20"/>
+        <Image Source="{Binding ElementName=this, Path=ImageSource, TargetNullValue={x:Null}}" Height="15" Width="15"/>
         <TextBlock Margin="10,0,0,0" Text="{Binding ElementName=this, Path=Text}" Grid.Column="1"/>
     </Grid>
 </UserControl>

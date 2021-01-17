@@ -151,9 +151,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\1.jpg" />
-    <Resource Include="Assets\2.jpg" />
-    <Resource Include="Assets\3.png" />
+    <Resource Include="Assets\1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Assets\4.jpg" />
     <Resource Include="Assets\5.jpg" />
     <Resource Include="Assets\profile1.jpg" />
