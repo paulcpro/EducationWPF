@@ -19,7 +19,7 @@
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
-        <Border Margin="5" BorderBrush="White" BorderThickness="1" CornerRadius="5">
+        <Border Margin="5" BorderBrush="White" BorderThickness="2" CornerRadius="5">
             <Border.Background>
                 <ImageBrush ImageSource="../Assets/profile1.jpg" Stretch="UniformToFill" />
             </Border.Background>

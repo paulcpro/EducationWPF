@@ -10,7 +10,7 @@
         <Grid>
             <Border CornerRadius="10">
                 <Border.Background>
-                    <ImageBrush ImageSource="{Binding ElementName=this, Path=BackgroundSource}" Stretch="Fill" />
+                    <ImageBrush ImageSource="{Binding ElementName=this, Path=BackgroundSource}" Stretch="UniformToFill" />
                 </Border.Background>
             </Border>
 
